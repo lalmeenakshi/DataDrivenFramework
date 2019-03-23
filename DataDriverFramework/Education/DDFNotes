@@ -1,0 +1,13 @@
+To read data from excel sheet-
+1. create object for File class
+2.object for FileInputStream class
+3.object for XSSFworkbook(for xlsx) or HSSF(for xls)
+4.call getsheet() then store in  XSSFSheet.
+5.call getrow().getCellnum().getStringvalue().
+Always close the workbook (wb.close) otherwise you will get memory leak issue in future.
+@dataprovider in TestNG step
+1.excel sheet is created.
+2.then a method getData() is created with annotaion data provider(@dataprovider)
+3.@Test(dataprovider="getData()"){}
+The number parameter in the test case is equal to the number of column. 
+
